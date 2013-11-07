@@ -1,6 +1,6 @@
 ﻿namespace WindowsFormsApplication3
 {
-    partial class Form2
+    partial class FormDetails
     {
         /// <summary>
         /// Required designer variable.
@@ -29,27 +29,27 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form2));
             System.Windows.Forms.Label first_NameLabel;
             System.Windows.Forms.Label last_NameLabel;
             System.Windows.Forms.Label payment_DateLabel;
             System.Windows.Forms.Label amountLabel;
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormDetails));
             this.karateDataSet = new WindowsFormsApplication3.KarateDataSet();
             this.paymentsWithNamesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.paymentsWithNamesTableAdapter = new WindowsFormsApplication3.KarateDataSetTableAdapters.PaymentsWithNamesTableAdapter();
             this.tableAdapterManager = new WindowsFormsApplication3.KarateDataSetTableAdapters.TableAdapterManager();
             this.paymentsWithNamesBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
+            this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
+            this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator = new System.Windows.Forms.ToolStripSeparator();
             this.bindingNavigatorPositionItem = new System.Windows.Forms.ToolStripTextBox();
-            this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
             this.bindingNavigatorSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.paymentsWithNamesBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
             this.first_NameTextBox = new System.Windows.Forms.TextBox();
             this.last_NameTextBox = new System.Windows.Forms.TextBox();
@@ -64,6 +64,42 @@
             ((System.ComponentModel.ISupportInitialize)(this.paymentsWithNamesBindingNavigator)).BeginInit();
             this.paymentsWithNamesBindingNavigator.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // first_NameLabel
+            // 
+            first_NameLabel.AutoSize = true;
+            first_NameLabel.Location = new System.Drawing.Point(16, 92);
+            first_NameLabel.Name = "first_NameLabel";
+            first_NameLabel.Size = new System.Drawing.Size(60, 13);
+            first_NameLabel.TabIndex = 1;
+            first_NameLabel.Text = "First Name:";
+            // 
+            // last_NameLabel
+            // 
+            last_NameLabel.AutoSize = true;
+            last_NameLabel.Location = new System.Drawing.Point(16, 118);
+            last_NameLabel.Name = "last_NameLabel";
+            last_NameLabel.Size = new System.Drawing.Size(61, 13);
+            last_NameLabel.TabIndex = 3;
+            last_NameLabel.Text = "Last Name:";
+            // 
+            // payment_DateLabel
+            // 
+            payment_DateLabel.AutoSize = true;
+            payment_DateLabel.Location = new System.Drawing.Point(16, 145);
+            payment_DateLabel.Name = "payment_DateLabel";
+            payment_DateLabel.Size = new System.Drawing.Size(77, 13);
+            payment_DateLabel.TabIndex = 5;
+            payment_DateLabel.Text = "Payment Date:";
+            // 
+            // amountLabel
+            // 
+            amountLabel.AutoSize = true;
+            amountLabel.Location = new System.Drawing.Point(16, 170);
+            amountLabel.Name = "amountLabel";
+            amountLabel.Size = new System.Drawing.Size(46, 13);
+            amountLabel.TabIndex = 7;
+            amountLabel.Text = "Amount:";
             // 
             // karateDataSet
             // 
@@ -120,6 +156,31 @@
             this.paymentsWithNamesBindingNavigator.TabIndex = 0;
             this.paymentsWithNamesBindingNavigator.Text = "bindingNavigator1";
             // 
+            // bindingNavigatorAddNewItem
+            // 
+            this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
+            this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
+            this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorAddNewItem.Text = "Add new";
+            // 
+            // bindingNavigatorCountItem
+            // 
+            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
+            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(35, 22);
+            this.bindingNavigatorCountItem.Text = "of {0}";
+            this.bindingNavigatorCountItem.ToolTipText = "Total number of items";
+            // 
+            // bindingNavigatorDeleteItem
+            // 
+            this.bindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
+            this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
+            this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorDeleteItem.Text = "Delete";
+            // 
             // bindingNavigatorMoveFirstItem
             // 
             this.bindingNavigatorMoveFirstItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
@@ -152,17 +213,10 @@
             this.bindingNavigatorPositionItem.Text = "0";
             this.bindingNavigatorPositionItem.ToolTipText = "Current position";
             // 
-            // bindingNavigatorCountItem
-            // 
-            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
-            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(35, 15);
-            this.bindingNavigatorCountItem.Text = "of {0}";
-            this.bindingNavigatorCountItem.ToolTipText = "Total number of items";
-            // 
             // bindingNavigatorSeparator1
             // 
-            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator";
-            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 6);
+            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator1";
+            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 25);
             // 
             // bindingNavigatorMoveNextItem
             // 
@@ -170,7 +224,7 @@
             this.bindingNavigatorMoveNextItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveNextItem.Image")));
             this.bindingNavigatorMoveNextItem.Name = "bindingNavigatorMoveNextItem";
             this.bindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(23, 20);
+            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(23, 22);
             this.bindingNavigatorMoveNextItem.Text = "Move next";
             // 
             // bindingNavigatorMoveLastItem
@@ -179,31 +233,13 @@
             this.bindingNavigatorMoveLastItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveLastItem.Image")));
             this.bindingNavigatorMoveLastItem.Name = "bindingNavigatorMoveLastItem";
             this.bindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(23, 20);
+            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(23, 22);
             this.bindingNavigatorMoveLastItem.Text = "Move last";
             // 
             // bindingNavigatorSeparator2
             // 
-            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator";
-            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 6);
-            // 
-            // bindingNavigatorAddNewItem
-            // 
-            this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
-            this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
-            this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorAddNewItem.Text = "Add new";
-            // 
-            // bindingNavigatorDeleteItem
-            // 
-            this.bindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
-            this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
-            this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(23, 20);
-            this.bindingNavigatorDeleteItem.Text = "Delete";
+            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
+            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 25);
             // 
             // paymentsWithNamesBindingNavigatorSaveItem
             // 
@@ -211,17 +247,8 @@
             this.paymentsWithNamesBindingNavigatorSaveItem.Enabled = false;
             this.paymentsWithNamesBindingNavigatorSaveItem.Image = ((System.Drawing.Image)(resources.GetObject("paymentsWithNamesBindingNavigatorSaveItem.Image")));
             this.paymentsWithNamesBindingNavigatorSaveItem.Name = "paymentsWithNamesBindingNavigatorSaveItem";
-            this.paymentsWithNamesBindingNavigatorSaveItem.Size = new System.Drawing.Size(23, 20);
+            this.paymentsWithNamesBindingNavigatorSaveItem.Size = new System.Drawing.Size(23, 22);
             this.paymentsWithNamesBindingNavigatorSaveItem.Text = "Save Data";
-            // 
-            // first_NameLabel
-            // 
-            first_NameLabel.AutoSize = true;
-            first_NameLabel.Location = new System.Drawing.Point(16, 92);
-            first_NameLabel.Name = "first_NameLabel";
-            first_NameLabel.Size = new System.Drawing.Size(60, 13);
-            first_NameLabel.TabIndex = 1;
-            first_NameLabel.Text = "First Name:";
             // 
             // first_NameTextBox
             // 
@@ -231,15 +258,6 @@
             this.first_NameTextBox.Size = new System.Drawing.Size(200, 20);
             this.first_NameTextBox.TabIndex = 2;
             // 
-            // last_NameLabel
-            // 
-            last_NameLabel.AutoSize = true;
-            last_NameLabel.Location = new System.Drawing.Point(16, 118);
-            last_NameLabel.Name = "last_NameLabel";
-            last_NameLabel.Size = new System.Drawing.Size(61, 13);
-            last_NameLabel.TabIndex = 3;
-            last_NameLabel.Text = "Last Name:";
-            // 
             // last_NameTextBox
             // 
             this.last_NameTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.paymentsWithNamesBindingSource, "Last_Name", true));
@@ -247,15 +265,6 @@
             this.last_NameTextBox.Name = "last_NameTextBox";
             this.last_NameTextBox.Size = new System.Drawing.Size(200, 20);
             this.last_NameTextBox.TabIndex = 4;
-            // 
-            // payment_DateLabel
-            // 
-            payment_DateLabel.AutoSize = true;
-            payment_DateLabel.Location = new System.Drawing.Point(16, 145);
-            payment_DateLabel.Name = "payment_DateLabel";
-            payment_DateLabel.Size = new System.Drawing.Size(77, 13);
-            payment_DateLabel.TabIndex = 5;
-            payment_DateLabel.Text = "Payment Date:";
             // 
             // payment_DateDateTimePicker
             // 
@@ -265,15 +274,6 @@
             this.payment_DateDateTimePicker.Size = new System.Drawing.Size(200, 20);
             this.payment_DateDateTimePicker.TabIndex = 6;
             // 
-            // amountLabel
-            // 
-            amountLabel.AutoSize = true;
-            amountLabel.Location = new System.Drawing.Point(16, 170);
-            amountLabel.Name = "amountLabel";
-            amountLabel.Size = new System.Drawing.Size(46, 13);
-            amountLabel.TabIndex = 7;
-            amountLabel.Text = "Amount:";
-            // 
             // amountTextBox
             // 
             this.amountTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.paymentsWithNamesBindingSource, "Amount", true));
@@ -282,7 +282,7 @@
             this.amountTextBox.Size = new System.Drawing.Size(200, 20);
             this.amountTextBox.TabIndex = 8;
             // 
-            // Form2
+            // FormDetails
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -296,8 +296,8 @@
             this.Controls.Add(amountLabel);
             this.Controls.Add(this.amountTextBox);
             this.Controls.Add(this.paymentsWithNamesBindingNavigator);
-            this.Name = "Form2";
-            this.Text = "Form2";
+            this.Name = "FormDetails";
+            this.Text = "Details Form";
             this.Load += new System.EventHandler(this.Form2_Load);
             ((System.ComponentModel.ISupportInitialize)(this.karateDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.paymentsWithNamesBindingSource)).EndInit();

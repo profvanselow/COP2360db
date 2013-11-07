@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApplication3
 {
-    public partial class Form1 : Form
+    public partial class FormDGV : Form
     {
-        public Form1()
+        public FormDGV()
         {
             InitializeComponent();
         }
@@ -34,7 +34,7 @@ namespace WindowsFormsApplication3
 
         private void form2ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Form form2 = new Form2();
+            Form form2 = new FormDetails();
             form2.Show();
         }
     }
